@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80383A819F0F8F8008ECCE3 /* UIAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80383A719F0F8F8008ECCE3 /* UIAlertView.swift */; };
+		A80383AA19F106E2008ECCE3 /* UIActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80383A919F106E2008ECCE3 /* UIActionSheet.swift */; };
 		A85D934C19EE939900E927AE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934B19EE939900E927AE /* UIButton.swift */; };
 		A85D935019EE94D300E927AE /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934F19EE94D300E927AE /* UITextField.swift */; };
 		A85D935219EE998E00E927AE /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935119EE998E00E927AE /* UIBarButtonItem.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A80383A719F0F8F8008ECCE3 /* UIAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertView.swift; sourceTree = "<group>"; };
+		A80383A919F106E2008ECCE3 /* UIActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheet.swift; sourceTree = "<group>"; };
 		A85D934B19EE939900E927AE /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A85D934F19EE94D300E927AE /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A85D935119EE998E00E927AE /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				A8AF820219ED78E30034DA60 /* Scream.h */,
+				A80383A719F0F8F8008ECCE3 /* UIAlertView.swift */,
+				A80383A919F106E2008ECCE3 /* UIActionSheet.swift */,
 				A8CA3A6C19ED880100B69EFA /* UIControl.swift */,
 				A85D934B19EE939900E927AE /* UIButton.swift */,
 				A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */,
@@ -344,7 +350,9 @@
 				A85D935A19EEA24A00E927AE /* UIStepper.swift in Sources */,
 				A8CA3A6D19ED880100B69EFA /* UIControl.swift in Sources */,
 				A85D935419EE9F8800E927AE /* UIDatePicker.swift in Sources */,
+				A80383AA19F106E2008ECCE3 /* UIActionSheet.swift in Sources */,
 				A85D934C19EE939900E927AE /* UIButton.swift in Sources */,
+				A80383A819F0F8F8008ECCE3 /* UIAlertView.swift in Sources */,
 				A85D935019EE94D300E927AE /* UITextField.swift in Sources */,
 				A85D935619EEA07800E927AE /* UISegmentedControl.swift in Sources */,
 			);
@@ -442,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -482,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
