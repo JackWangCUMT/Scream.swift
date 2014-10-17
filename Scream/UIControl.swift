@@ -23,12 +23,12 @@ public extension UIControl {
         let proxy = UIControlProxy(action)
         self.addTarget(proxy, action: "act:", forControlEvents: event)
         
-        let eventKey: String = self.proxyKey(event)
-        if self.proxies[eventKey] == nil {
-            self.proxies[eventKey] = [String:UIControlProxy]()
+        let eventKey: String = self.__proxyKey(event)
+        if self.__proxies[eventKey] == nil {
+            self.__proxies[eventKey] = [String:UIControlProxy]()
         }
         
-        self.proxies[eventKey]![label] = proxy
+        self.__proxies[eventKey]![label] = proxy
         
         return self
     }
@@ -39,9 +39,9 @@ public extension UIControl {
     
     internal func __off(event:UIControlEvents, label:String = "") -> UIControl {
         
-        if let proxy: UIControlProxy = self.proxies[proxyKey(event)]?[label] {
+        if let proxy: UIControlProxy = self.__proxies[__proxyKey(event)]?[label] {
             self.removeTarget(proxy, action: "act:", forControlEvents: event)
-            self.proxies[proxyKey(event)]!.removeValueForKey(label)
+            self.__proxies[__proxyKey(event)]!.removeValueForKey(label)
         }
         return self
     }
@@ -53,9 +53,9 @@ public extension UIControl {
 
 ///MARK:- Internal
 
-private var UIControlProxiesKey:Void
+private var __UIControlProxiesKey:Void
 
-typealias UIControlProxies = [String: [String: UIControlProxy]]
+typealias __UIControlProxies = [String: [String: UIControlProxy]]
 
 internal class UIControlProxy : NSObject {
     
@@ -72,25 +72,25 @@ internal class UIControlProxy : NSObject {
 
 internal extension UIControl {
     
-    func proxyKey(event:UIControlEvents) -> String {
+    func __proxyKey(event:UIControlEvents) -> String {
         return "UIControl:\(event.rawValue)"
     }
     
-    func setter(newValue:UIControlProxies) -> UIControlProxies {
-        objc_setAssociatedObject(self, &UIControlProxiesKey, newValue, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC));
+    func __setter(newValue:__UIControlProxies) -> __UIControlProxies {
+        objc_setAssociatedObject(self, &__UIControlProxiesKey, newValue, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC));
         return newValue
     }
     
-    var proxies: UIControlProxies {
+    var __proxies: __UIControlProxies {
         get {
-            if let result = objc_getAssociatedObject(self, &UIControlProxiesKey) as? UIControlProxies {
+            if let result = objc_getAssociatedObject(self, &__UIControlProxiesKey) as? __UIControlProxies {
                 return result
             } else {
-                return setter(UIControlProxies())
+                return __setter(__UIControlProxies())
             }
         }
         set {
-            setter(newValue)
+            __setter(newValue)
         }
     }
 }
