@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Pinglin Tang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIBarButtonItem {
     

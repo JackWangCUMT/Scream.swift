@@ -18,6 +18,14 @@
 		A8AF820319ED78E30034DA60 /* Scream.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AF820219ED78E30034DA60 /* Scream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8AF820919ED78E30034DA60 /* Scream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AF81FD19ED78E30034DA60 /* Scream.framework */; };
 		A8AF821019ED78E30034DA60 /* ScreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF820F19ED78E30034DA60 /* ScreamTests.swift */; };
+		A8B36D9B19EFED8500673B54 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934B19EE939900E927AE /* UIButton.swift */; };
+		A8B36D9C19EFED8500673B54 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934F19EE94D300E927AE /* UITextField.swift */; };
+		A8B36D9D19EFED8500673B54 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935119EE998E00E927AE /* UIBarButtonItem.swift */; };
+		A8B36D9E19EFED8500673B54 /* UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935319EE9F8800E927AE /* UIDatePicker.swift */; };
+		A8B36D9F19EFED8500673B54 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935519EEA07800E927AE /* UISegmentedControl.swift */; };
+		A8B36DA019EFED8500673B54 /* UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935719EEA14D00E927AE /* UISlider.swift */; };
+		A8B36DA119EFED8500673B54 /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935919EEA24A00E927AE /* UIStepper.swift */; };
+		A8B36DA219EFED8500673B54 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935C19EEA2D300E927AE /* UISwitch.swift */; };
 		A8CA3A6D19ED880100B69EFA /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A6C19ED880100B69EFA /* UIControl.swift */; };
 		A8CA3A7919ED8C1500B69EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A7819ED8C1500B69EFA /* AppDelegate.swift */; };
 		A8CA3A7B19ED8C1500B69EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A7A19ED8C1500B69EFA /* ViewController.swift */; };
@@ -354,6 +362,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B36D9B19EFED8500673B54 /* UIButton.swift in Sources */,
+				A8B36D9C19EFED8500673B54 /* UITextField.swift in Sources */,
+				A8B36D9D19EFED8500673B54 /* UIBarButtonItem.swift in Sources */,
+				A8B36D9E19EFED8500673B54 /* UIDatePicker.swift in Sources */,
+				A8B36D9F19EFED8500673B54 /* UISegmentedControl.swift in Sources */,
+				A8B36DA019EFED8500673B54 /* UISlider.swift in Sources */,
+				A8B36DA119EFED8500673B54 /* UIStepper.swift in Sources */,
+				A8B36DA219EFED8500673B54 /* UISwitch.swift in Sources */,
 				A8CA3A9C19ED92C700B69EFA /* UIControl.swift in Sources */,
 				A8CA3AA019EE386D00B69EFA /* UIGestureRecognizer.swift in Sources */,
 				A8CA3A7B19ED8C1500B69EFA /* ViewController.swift in Sources */,

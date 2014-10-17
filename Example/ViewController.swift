@@ -23,9 +23,10 @@ class ViewController: UIViewController {
                 $0.backgroundColor = UIColor.blackColor()
                 println("2")
         }
-
         
+//        let button = UIButton()
         self.view.addSubview(control)
+        
     }
 
     override func didReceiveMemoryWarning() {

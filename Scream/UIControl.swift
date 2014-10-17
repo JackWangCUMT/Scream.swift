@@ -17,7 +17,7 @@ public extension UIControl {
         return self
     }
     
-    public func __on(event:UIControlEvents, label:String = "", action: UIControl -> ()) -> UIControl {
+    internal func __on(event:UIControlEvents, label:String = "", action: UIControl -> ()) -> UIControl {
         self.off(event, label:label)
         
         let proxy = UIControlProxy(action)
@@ -37,7 +37,7 @@ public extension UIControl {
         return self.__on(event, label: label, action: action)
     }
     
-    public func __off(event:UIControlEvents, label:String = "") -> UIControl {
+    internal func __off(event:UIControlEvents, label:String = "") -> UIControl {
         
         if let proxy: UIControlProxy = self.proxies[proxyKey(event)]?[label] {
             self.removeTarget(proxy, action: "act:", forControlEvents: event)
