@@ -11,16 +11,18 @@ import UIKit
 public extension UIAlertView {
 
     public convenience init(title: String, message: String, cancelButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
-        let delegate_ = UIAlertViewDelegate()
-        self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
+        
+        self.init(title: title, message:message, cancelButtonTitle:cancelButtonTitle)
         self.addButtonWithTitle(firstButtonTitle)
+        
         for buttonTitle in moreButtonTitles {
             self.addButtonWithTitle(buttonTitle)
         }
     }
 
     public convenience init(title: String?, message: String?, cancelButtonTitle: String?) {
-        let delegate_ = UIAlertViewDelegate()
+        
+        let delegate_ = AlertViewDelegate()
         self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
         self.__delegate = delegate_
     }
@@ -45,8 +47,8 @@ public extension UIAlertView {
         return self;
     }
     
-    public func willDismiss(action:(@autoclosure () -> ())?) -> UIAlertView {
-        self.__delegate?.willPresent = action
+    public func willDismiss(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
+        self.__delegate?.willDismiss = action
         return self;
     }
     
@@ -56,7 +58,7 @@ public extension UIAlertView {
     }
 }
 
-internal class UIAlertViewDelegate : NSObject {
+internal class AlertViewDelegate : NSObject, UIAlertViewDelegate {
 
     typealias Action = () -> ()
     typealias IndexAction = (Int) -> ()
@@ -86,26 +88,28 @@ internal class UIAlertViewDelegate : NSObject {
     }
     
     var willDismiss:IndexAction?
+    
     func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
         self.willDismiss?(buttonIndex)
     }
     
     var didDismiss:IndexAction?
+    
     func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         self.didDismiss?(buttonIndex)
     }
 }
 
-private var UIAlertViewDelegateKey:Void
+private var AlertViewDelegateKey:Void
 
 internal extension UIAlertView {
 
-    var __delegate: UIAlertViewDelegate? {
+    var __delegate: AlertViewDelegate? {
         get {
-            return objc_getAssociatedObject(self, &UIAlertViewDelegateKey) as? UIAlertViewDelegate
+            return objc_getAssociatedObject(self, &AlertViewDelegateKey) as? AlertViewDelegate
         }
         set {
-            objc_setAssociatedObject(self, &UIAlertViewDelegateKey, newValue, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC));
+            objc_setAssociatedObject(self, &AlertViewDelegateKey, newValue, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC));
         }
     }
 }
