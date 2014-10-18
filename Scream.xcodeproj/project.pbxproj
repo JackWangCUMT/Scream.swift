@@ -37,6 +37,7 @@
 		A8CA3A9C19ED92C700B69EFA /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A6C19ED880100B69EFA /* UIControl.swift */; };
 		A8CA3A9E19EE2D5A00B69EFA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */; };
 		A8CA3AA019EE386D00B69EFA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */; };
+		A8E61C6719F28284004C5C73 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		A8CA3A7F19ED8C1500B69EFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8CA3A8219ED8C1500B69EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
+		A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				A85D935719EEA14D00E927AE /* UISlider.swift */,
 				A85D935919EEA24A00E927AE /* UIStepper.swift */,
 				A85D935C19EEA2D300E927AE /* UISwitch.swift */,
+				A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */,
 				A8AF820019ED78E30034DA60 /* Supporting Files */,
 			);
 			path = Scream;
@@ -354,6 +357,7 @@
 				A85D934C19EE939900E927AE /* UIButton.swift in Sources */,
 				A80383A819F0F8F8008ECCE3 /* UIAlertView.swift in Sources */,
 				A85D935019EE94D300E927AE /* UITextField.swift in Sources */,
+				A8E61C6719F28284004C5C73 /* UIRefreshControl.swift in Sources */,
 				A85D935619EEA07800E927AE /* UISegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
