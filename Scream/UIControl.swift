@@ -18,7 +18,12 @@ public extension UIControl {
     }
     
     public func when(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
-        return self.__on(event, label: label, action: action)
+
+        if action != nil {
+            return self.__on(event, label: label, action: action!)
+        } else {
+            return self.__off(event, label: label)
+        }
     }
 }
 
@@ -65,14 +70,10 @@ internal extension UIControl {
         }
     }
     
-    func __on(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
+    func __on(event:UIControlEvents, label:String = "", action: UIControl -> ()) -> UIControl {
         self.__off(event, label:label)
         
-        if action == nil {
-            return self
-        }
-        
-        let proxy = UIControlProxy(action!)
+        let proxy = UIControlProxy(action)
         self.addTarget(proxy, action: "act:", forControlEvents: event)
         
         let eventKey: String = self.__proxyKey(event)
