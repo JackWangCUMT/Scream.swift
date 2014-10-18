@@ -15,11 +15,11 @@ extension UIStepper {
         return self
     }
     
-    public func valueOn(label:String = "", action: Double -> ()) -> UIStepper {
-        return self.__on(UIControlEvents.ValueChanged, label: label) { action(($0 as UIStepper).value ) } as UIStepper
-    }
-    
-    public func valueOff(label:String = "") -> UIStepper {
-        return self.__off(UIControlEvents.ValueChanged, label: label) as UIStepper
+    public func valueChanged(label:String = "", action: (Double -> ())?) -> UIStepper {
+        if action != nil {
+            return self.__on(UIControlEvents.ValueChanged, label: label) { action!(($0 as UIStepper).value ) } as UIStepper
+        } else {
+            return self.__off(UIControlEvents.ValueChanged, label: label) as UIStepper
+        }
     }
 }

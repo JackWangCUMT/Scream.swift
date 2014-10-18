@@ -15,13 +15,12 @@ public extension UIButton {
         return self
     }
     
-    public func clickOn(label:String = "", action: UIButton -> ()) -> UIButton {
-        return self.__on(UIControlEvents.TouchUpInside, label: label) {
-            action($0 as UIButton)
-        } as UIButton
-    }
-    
-    public func clickOff(label:String = "") -> UIButton {
-        return self.__off(UIControlEvents.TouchUpInside, label: label) as UIButton
+    public func clicked(label:String = "", action: (UIButton -> ())?) -> UIButton {
+
+        if action != nil {
+            return self.__on(UIControlEvents.TouchUpInside, label: label) { action!($0 as UIButton) } as UIButton
+        } else {
+            return self.__off(UIControlEvents.TouchUpInside, label: label) as UIButton
+        }
     }
 }

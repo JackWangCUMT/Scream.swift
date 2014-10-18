@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIAlertView {
 
-    convenience init(title: String, message: String, cancelButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
+    public convenience init(title: String, message: String, cancelButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
         let delegate_ = UIAlertViewDelegate()
         self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
         self.addButtonWithTitle(firstButtonTitle)
@@ -19,44 +19,44 @@ public extension UIAlertView {
         }
     }
 
-    convenience init(title: String?, message: String?, cancelButtonTitle: String?) {
+    public convenience init(title: String?, message: String?, cancelButtonTitle: String?) {
         let delegate_ = UIAlertViewDelegate()
         self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
         self.__delegate = delegate_
     }
     
-    public func onClicked(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
+    public func clicked(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
         self.__delegate?.clicked = action
         return self;
     }
     
-    public func onCancel(action:(@autoclosure () -> ())?) -> UIAlertView {
+    public func cancel(action:(@autoclosure () -> ())?) -> UIAlertView {
         self.__delegate?.cancel = action
         return self;
     }
     
-    public func onWillPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
+    public func willPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
         self.__delegate?.willPresent = action
         return self;
     }
     
-    public func onDidPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
+    public func didPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
         self.__delegate?.didPresent = action
         return self;
     }
     
-    public func onWillDismiss(action:(@autoclosure () -> ())?) -> UIAlertView {
+    public func willDismiss(action:(@autoclosure () -> ())?) -> UIAlertView {
         self.__delegate?.willPresent = action
         return self;
     }
     
-    public func onDidDismiss(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
+    public func didDismiss(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
         self.__delegate?.didDismiss = action
         return self;
     }
 }
 
-public class UIAlertViewDelegate : NSObject {
+internal class UIAlertViewDelegate : NSObject {
 
     typealias Action = () -> ()
     typealias IndexAction = (Int) -> ()

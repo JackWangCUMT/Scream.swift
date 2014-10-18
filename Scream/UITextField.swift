@@ -15,11 +15,11 @@ public extension UITextField {
         return self
     }
     
-    public func textOn(label:String = "", action: String -> ()) -> UITextField {
-        return self.__on(UIControlEvents.EditingChanged | UIControlEvents.EditingDidBegin, label: label) { action(($0 as UITextField).text ) } as UITextField
-    }
-    
-    public func textOff(label:String = "") -> UITextField {
-        return self.__off(UIControlEvents.EditingChanged | UIControlEvents.EditingDidBegin, label: label) as UITextField
+    public func textChanged(label:String = "", action: (String -> ())?) -> UITextField {
+        if action != nil {
+            return self.__on(UIControlEvents.EditingChanged | UIControlEvents.EditingDidBegin, label: label) { action!(($0 as UITextField).text ) } as UITextField
+        } else {
+            return self.__off(UIControlEvents.EditingChanged | UIControlEvents.EditingDidBegin, label: label) as UITextField
+        }
     }
 }

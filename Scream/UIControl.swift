@@ -17,37 +17,8 @@ public extension UIControl {
         return self
     }
     
-    internal func __on(event:UIControlEvents, label:String = "", action: UIControl -> ()) -> UIControl {
-        self.off(event, label:label)
-        
-        let proxy = UIControlProxy(action)
-        self.addTarget(proxy, action: "act:", forControlEvents: event)
-        
-        let eventKey: String = self.__proxyKey(event)
-        if self.__proxies[eventKey] == nil {
-            self.__proxies[eventKey] = [String:UIControlProxy]()
-        }
-        
-        self.__proxies[eventKey]![label] = proxy
-        
-        return self
-    }
-
-    public func on(event:UIControlEvents, label:String = "", action: UIControl -> ()) -> UIControl {
+    public func on(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
         return self.__on(event, label: label, action: action)
-    }
-    
-    internal func __off(event:UIControlEvents, label:String = "") -> UIControl {
-        
-        if let proxy: UIControlProxy = self.__proxies[__proxyKey(event)]?[label] {
-            self.removeTarget(proxy, action: "act:", forControlEvents: event)
-            self.__proxies[__proxyKey(event)]!.removeValueForKey(label)
-        }
-        return self
-    }
-
-    public func off(event:UIControlEvents, label:String = "") -> UIControl {
-        return self.__off(event, label: label)
     }
 }
 
@@ -92,5 +63,34 @@ internal extension UIControl {
         set {
             __setter(newValue)
         }
+    }
+    
+    func __on(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
+        self.__off(event, label:label)
+        
+        if action == nil {
+            return self
+        }
+        
+        let proxy = UIControlProxy(action!)
+        self.addTarget(proxy, action: "act:", forControlEvents: event)
+        
+        let eventKey: String = self.__proxyKey(event)
+        if self.__proxies[eventKey] == nil {
+            self.__proxies[eventKey] = [String:UIControlProxy]()
+        }
+        
+        self.__proxies[eventKey]![label] = proxy
+        
+        return self
+    }
+    
+    func __off(event:UIControlEvents, label:String = "") -> UIControl {
+        
+        if let proxy: UIControlProxy = self.__proxies[__proxyKey(event)]?[label] {
+            self.removeTarget(proxy, action: "act:", forControlEvents: event)
+            self.__proxies[__proxyKey(event)]!.removeValueForKey(label)
+        }
+        return self
     }
 }

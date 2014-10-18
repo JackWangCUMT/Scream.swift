@@ -15,25 +15,19 @@ public extension UIBarButtonItem {
         return self
     }
     
-    public func on(label:String = "", action: UIBarButtonItem -> ()) -> UIBarButtonItem {
+    public func clicked(label:String = "", action: (UIBarButtonItem -> ())?) -> UIBarButtonItem {
         
-        self.off(label:label)
+        self.__offClicked(label:label)
         
-        let proxy = UIBarButtonItemProxy(action)
+        if action == nil {
+            return self
+        }
+        
+        let proxy = UIBarButtonItemProxy(action!)
         self.target = proxy
         self.action = "act:"
         self.proxies[label] = proxy
 
-        return self
-    }
-    
-    public func off(label:String = "") -> UIBarButtonItem {
-        
-        if let proxy = self.proxies[label] {
-            self.target = nil
-            self.action = ""
-            self.proxies.removeValueForKey(label)
-        }
         return self
     }
 }
@@ -75,5 +69,15 @@ internal extension UIBarButtonItem {
         set {
             setter(newValue)
         }
+    }
+    
+    func __offClicked(label:String = "") -> UIBarButtonItem {
+        
+        if let proxy = self.proxies[label] {
+            self.target = nil
+            self.action = ""
+            self.proxies.removeValueForKey(label)
+        }
+        return self
     }
 }

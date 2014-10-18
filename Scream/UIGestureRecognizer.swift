@@ -19,17 +19,21 @@ public extension UIGestureRecognizer {
         self.__proxies[label] = proxy
     }
     
-    public func on(label:String = "", action: (UIGestureRecognizer) -> ()) -> UIGestureRecognizer {
-        self.off(label:label, action: action)
+    public func on(label:String = "", action: ((UIGestureRecognizer) -> ())?) -> UIGestureRecognizer {
+        self.__off(label:label)
         
-        let proxy = UIGestureRecognizerProxy(action)
+        if action == nil {
+            return self
+        }
+        
+        let proxy = UIGestureRecognizerProxy(action!)
         self.__proxies[label] = proxy
         self.addTarget(proxy, action:"act:")
         
         return self
     }
     
-    public func off(label:String = "", action: (UIGestureRecognizer) -> ()) -> UIGestureRecognizer{
+    internal func __off(label:String = "") -> UIGestureRecognizer{
         
         if let proxy = self.__proxies[label] {
             self.removeTarget(proxy, action:"act:")

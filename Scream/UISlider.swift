@@ -15,11 +15,11 @@ extension UISlider {
         return self
     }
     
-    public func valueOn(label:String = "", action: Float -> ()) -> UISlider {
-        return self.__on(UIControlEvents.ValueChanged, label: label) { action(($0 as UISlider).value ) } as UISlider
-    }
-    
-    public func valueOff(label:String = "") -> UISlider {
-        return self.__off(UIControlEvents.ValueChanged, label: label) as UISlider
+    public func valueChanged(label:String = "", action: (Float -> ())?) -> UISlider {
+        if action != nil {
+            return self.__on(UIControlEvents.ValueChanged, label: label) { action!(($0 as UISlider).value ) } as UISlider
+        } else {
+            return self.__off(UIControlEvents.ValueChanged, label: label) as UISlider
+        }
     }
 }

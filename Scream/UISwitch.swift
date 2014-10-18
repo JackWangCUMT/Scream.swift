@@ -15,11 +15,11 @@ extension UISwitch {
         return self
     }
     
-    public func onOn(label:String = "", action: Bool -> ()) -> UISwitch {
-        return self.__on(UIControlEvents.ValueChanged, label: label) { action(($0 as UISwitch).on ) } as UISwitch
-    }
-    
-    public func onOff(label:String = "") -> UISwitch {
-        return self.__off(UIControlEvents.ValueChanged, label: label) as UISwitch
+    public func valueChanged(label:String = "", action: (Bool -> ())?) -> UISwitch {
+        if action != nil {
+            return self.__on(UIControlEvents.ValueChanged, label: label) { action!(($0 as UISwitch).on ) } as UISwitch
+        } else {
+            return self.__off(UIControlEvents.ValueChanged, label: label) as UISwitch
+        }
     }
 }

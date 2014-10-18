@@ -15,12 +15,11 @@ extension UIDatePicker {
         return self
     }
     
-    public func dateOn(label:String = "", action: NSDate -> ()) -> UIDatePicker {
-        return self.__on(UIControlEvents.ValueChanged, label: label) { action(($0 as UIDatePicker).date ) } as UIDatePicker
+    public func dateChanged(label:String = "", action: (NSDate -> ())?) -> UIDatePicker {
+        if action != nil {
+            return self.__on(UIControlEvents.ValueChanged, label: label) { action!(($0 as UIDatePicker).date ) } as UIDatePicker
+        } else {
+            return self.__off(UIControlEvents.ValueChanged, label: label) as UIDatePicker
+        }
     }
-    
-    public func dateOff(label:String = "") -> UIDatePicker {
-        return self.__off(UIControlEvents.ValueChanged, label: label) as UIDatePicker
-    }
-    
 }
