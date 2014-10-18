@@ -10,6 +10,11 @@ import UIKit
 
 public extension UIActionSheet {
     
+    public func now(action: UIActionSheet -> ()) -> UIActionSheet {
+        action(self)
+        return self
+    }
+
     public convenience init(title: String?, cancelButtonTitle: String?, destructiveButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
 
         self.init(title:title, cancelButtonTitle:cancelButtonTitle, destructiveButtonTitle:destructiveButtonTitle)

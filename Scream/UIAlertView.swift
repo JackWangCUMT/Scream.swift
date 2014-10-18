@@ -10,6 +10,11 @@ import UIKit
 
 public extension UIAlertView {
 
+    public func now(action: UIAlertView -> ()) -> UIAlertView {
+        action(self)
+        return self
+    }
+
     public convenience init(title: String, message: String, cancelButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
         
         self.init(title: title, message:message, cancelButtonTitle:cancelButtonTitle)
