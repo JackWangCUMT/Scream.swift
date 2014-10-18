@@ -17,7 +17,7 @@ public extension UIControl {
         return self
     }
     
-    public func on(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
+    public func when(event:UIControlEvents, label:String = "", action: (UIControl -> ())?) -> UIControl {
         return self.__on(event, label: label, action: action)
     }
 }

@@ -16,10 +16,10 @@ class ViewController: UIViewController {
         let control =
         UIControl(frame: CGRectMake(110, 100, 100, 100)).now {
                 $0.backgroundColor = UIColor.orangeColor()
-        }.on(UIControlEvents.TouchUpInside, label: "1") {
+        }.when(UIControlEvents.TouchUpInside, label: "1") {
                 $0.backgroundColor = UIColor.redColor()
                 println("1")
-        }.on(UIControlEvents.TouchUpInside, label: "2") {
+        }.when(UIControlEvents.TouchUpInside, label: "2") {
                 $0.backgroundColor = UIColor.blackColor()
                 println("2")
         }
