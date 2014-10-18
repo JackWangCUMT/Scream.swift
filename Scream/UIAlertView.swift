@@ -8,29 +8,95 @@
 
 import UIKit
 
-extension UIAlertView {
+public extension UIAlertView {
 
-    convenience init(title: String?, message: String?, cancelButtonTitle: String?, action: (UIAlertView, clickedButtonAtIndex:Int) -> ()) {
-        let delegate_ = UIAlertViewDelegate(action)
+    convenience init(title: String, message: String, cancelButtonTitle: String?, otherButtonTitles firstButtonTitle: String, _ moreButtonTitles: String...) {
+        let delegate_ = UIAlertViewDelegate()
+        self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
+        self.addButtonWithTitle(firstButtonTitle)
+        for buttonTitle in moreButtonTitles {
+            self.addButtonWithTitle(buttonTitle)
+        }
+    }
+
+    convenience init(title: String?, message: String?, cancelButtonTitle: String?) {
+        let delegate_ = UIAlertViewDelegate()
         self.init(title: title, message:message, delegate:delegate_, cancelButtonTitle:cancelButtonTitle)
         self.__delegate = delegate_
+    }
+    
+    public func onClicked(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
+        self.__delegate?.clicked = action
+        return self;
+    }
+    
+    public func onCancel(action:(@autoclosure () -> ())?) -> UIAlertView {
+        self.__delegate?.cancel = action
+        return self;
+    }
+    
+    public func onWillPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
+        self.__delegate?.willPresent = action
+        return self;
+    }
+    
+    public func onDidPresent(action:(@autoclosure () -> ())?) -> UIAlertView {
+        self.__delegate?.didPresent = action
+        return self;
+    }
+    
+    public func onWillDismiss(action:(@autoclosure () -> ())?) -> UIAlertView {
+        self.__delegate?.willPresent = action
+        return self;
+    }
+    
+    public func onDidDismiss(action:((buttonAtIndex:Int) -> ())?) -> UIAlertView {
+        self.__delegate?.didDismiss = action
+        return self;
+    }
+}
+
+public class UIAlertViewDelegate : NSObject {
+
+    typealias Action = () -> ()
+    typealias IndexAction = (Int) -> ()
+    
+    var clicked:IndexAction?
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        self.clicked?(buttonIndex)
+    }
+
+    var cancel:Action?
+    
+    func alertViewCancel(alertView: UIAlertView) {
+        self.cancel?()
+    }
+    
+    var willPresent:Action?
+    
+    func willPresentAlertView(alertView: UIAlertView) {
+        self.willPresent?()
+    }
+    
+    var didPresent:Action?
+    
+    func didPresentAlertView(alertView: UIAlertView) {
+        self.didPresent?()
+    }
+    
+    var willDismiss:IndexAction?
+    func alertView(alertView: UIAlertView, willDismissWithButtonIndex buttonIndex: Int) {
+        self.willDismiss?(buttonIndex)
+    }
+    
+    var didDismiss:IndexAction?
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        self.didDismiss?(buttonIndex)
     }
 }
 
 private var UIAlertViewDelegateKey:Void
-
-internal class UIAlertViewDelegate : NSObject {
-
-    var action: (UIAlertView, clickedButtonAtIndex:Int) -> ()
-    
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        action(alertView, clickedButtonAtIndex:buttonIndex)
-    }
-    
-    init(_ action: (UIAlertView, clickedButtonAtIndex:Int) -> ()) {
-        self.action = action
-    }
-}
 
 internal extension UIAlertView {
 
