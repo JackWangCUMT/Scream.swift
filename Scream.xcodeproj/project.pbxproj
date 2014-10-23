@@ -20,23 +20,21 @@
 		A8AF820319ED78E30034DA60 /* Scream.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AF820219ED78E30034DA60 /* Scream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8AF820919ED78E30034DA60 /* Scream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AF81FD19ED78E30034DA60 /* Scream.framework */; };
 		A8AF821019ED78E30034DA60 /* ScreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF820F19ED78E30034DA60 /* ScreamTests.swift */; };
-		A8B36D9B19EFED8500673B54 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934B19EE939900E927AE /* UIButton.swift */; };
-		A8B36D9C19EFED8500673B54 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934F19EE94D300E927AE /* UITextField.swift */; };
-		A8B36D9D19EFED8500673B54 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935119EE998E00E927AE /* UIBarButtonItem.swift */; };
-		A8B36D9E19EFED8500673B54 /* UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935319EE9F8800E927AE /* UIDatePicker.swift */; };
-		A8B36D9F19EFED8500673B54 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935519EEA07800E927AE /* UISegmentedControl.swift */; };
-		A8B36DA019EFED8500673B54 /* UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935719EEA14D00E927AE /* UISlider.swift */; };
-		A8B36DA119EFED8500673B54 /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935919EEA24A00E927AE /* UIStepper.swift */; };
-		A8B36DA219EFED8500673B54 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935C19EEA2D300E927AE /* UISwitch.swift */; };
 		A8CA3A6D19ED880100B69EFA /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A6C19ED880100B69EFA /* UIControl.swift */; };
-		A8CA3A7919ED8C1500B69EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A7819ED8C1500B69EFA /* AppDelegate.swift */; };
-		A8CA3A7B19ED8C1500B69EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A7A19ED8C1500B69EFA /* ViewController.swift */; };
-		A8CA3A7E19ED8C1500B69EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CA3A7C19ED8C1500B69EFA /* Main.storyboard */; };
-		A8CA3A8019ED8C1500B69EFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CA3A7F19ED8C1500B69EFA /* Images.xcassets */; };
-		A8CA3A8319ED8C1500B69EFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CA3A8119ED8C1500B69EFA /* LaunchScreen.xib */; };
-		A8CA3A9C19ED92C700B69EFA /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A6C19ED880100B69EFA /* UIControl.swift */; };
 		A8CA3A9E19EE2D5A00B69EFA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */; };
-		A8CA3AA019EE386D00B69EFA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */; };
+		A8D3C33619F39BDF0027C9EC /* UIAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80383A719F0F8F8008ECCE3 /* UIAlertView.swift */; };
+		A8D3C33719F39BE30027C9EC /* UIActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80383A919F106E2008ECCE3 /* UIActionSheet.swift */; };
+		A8D3C33919F39BE70027C9EC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A6C19ED880100B69EFA /* UIControl.swift */; };
+		A8D3C33A19F39BEB0027C9EC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934B19EE939900E927AE /* UIButton.swift */; };
+		A8D3C33B19F39BEF0027C9EC /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */; };
+		A8D3C33C19F39BF20027C9EC /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D934F19EE94D300E927AE /* UITextField.swift */; };
+		A8D3C33D19F39BF50027C9EC /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935119EE998E00E927AE /* UIBarButtonItem.swift */; };
+		A8D3C33E19F39BF80027C9EC /* UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935319EE9F8800E927AE /* UIDatePicker.swift */; };
+		A8D3C33F19F39BFD0027C9EC /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935519EEA07800E927AE /* UISegmentedControl.swift */; };
+		A8D3C34019F39C000027C9EC /* UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935719EEA14D00E927AE /* UISlider.swift */; };
+		A8D3C34119F39C030027C9EC /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935919EEA24A00E927AE /* UIStepper.swift */; };
+		A8D3C34219F39C070027C9EC /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935C19EEA2D300E927AE /* UISwitch.swift */; };
+		A8D3C34319F39C0A0027C9EC /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */; };
 		A8E61C6719F28284004C5C73 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,19 +47,6 @@
 			remoteInfo = Scream;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A8CA3A9819ED913700B69EFA /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A80383A719F0F8F8008ECCE3 /* UIAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertView.swift; sourceTree = "<group>"; };
@@ -81,13 +66,6 @@
 		A8AF820E19ED78E30034DA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AF820F19ED78E30034DA60 /* ScreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreamTests.swift; sourceTree = "<group>"; };
 		A8CA3A6C19ED880100B69EFA /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
-		A8CA3A7419ED8C1500B69EFA /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8CA3A7719ED8C1500B69EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8CA3A7819ED8C1500B69EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8CA3A7A19ED8C1500B69EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A8CA3A7D19ED8C1500B69EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A8CA3A7F19ED8C1500B69EFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A8CA3A8219ED8C1500B69EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
 		A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,13 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8CA3A7119ED8C1500B69EFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,7 +94,6 @@
 			children = (
 				A8AF81FF19ED78E30034DA60 /* Scream */,
 				A8AF820C19ED78E30034DA60 /* ScreamTests */,
-				A8CA3A7519ED8C1500B69EFA /* Example */,
 				A8AF81FE19ED78E30034DA60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,7 +103,6 @@
 			children = (
 				A8AF81FD19ED78E30034DA60 /* Scream.framework */,
 				A8AF820819ED78E30034DA60 /* ScreamTests.xctest */,
-				A8CA3A7419ED8C1500B69EFA /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,27 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				A8AF820E19ED78E30034DA60 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A8CA3A7519ED8C1500B69EFA /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				A8CA3A7819ED8C1500B69EFA /* AppDelegate.swift */,
-				A8CA3A7A19ED8C1500B69EFA /* ViewController.swift */,
-				A8CA3A7C19ED8C1500B69EFA /* Main.storyboard */,
-				A8CA3A7F19ED8C1500B69EFA /* Images.xcassets */,
-				A8CA3A8119ED8C1500B69EFA /* LaunchScreen.xib */,
-				A8CA3A7619ED8C1500B69EFA /* Supporting Files */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		A8CA3A7619ED8C1500B69EFA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A8CA3A7719ED8C1500B69EFA /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,24 +204,6 @@
 			productReference = A8AF820819ED78E30034DA60 /* ScreamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A8CA3A7319ED8C1500B69EFA /* Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A8CA3A9019ED8C1500B69EFA /* Build configuration list for PBXNativeTarget "Example" */;
-			buildPhases = (
-				A8CA3A7019ED8C1500B69EFA /* Sources */,
-				A8CA3A7119ED8C1500B69EFA /* Frameworks */,
-				A8CA3A7219ED8C1500B69EFA /* Resources */,
-				A8CA3A9819ED913700B69EFA /* Copy Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Example;
-			productName = Example;
-			productReference = A8CA3A7419ED8C1500B69EFA /* Example.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -281,15 +211,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Scream;
+				ORGANIZATIONNAME = "Pinglin Tang";
 				TargetAttributes = {
 					A8AF81FC19ED78E30034DA60 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 					A8AF820719ED78E30034DA60 = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					A8CA3A7319ED8C1500B69EFA = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -309,7 +236,6 @@
 			targets = (
 				A8AF81FC19ED78E30034DA60 /* Scream */,
 				A8AF820719ED78E30034DA60 /* ScreamTests */,
-				A8CA3A7319ED8C1500B69EFA /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -326,16 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8CA3A7219ED8C1500B69EFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8CA3A7E19ED8C1500B69EFA /* Main.storyboard in Resources */,
-				A8CA3A8319ED8C1500B69EFA /* LaunchScreen.xib in Resources */,
-				A8CA3A8019ED8C1500B69EFA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,26 +282,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D3C33A19F39BEB0027C9EC /* UIButton.swift in Sources */,
+				A8D3C34219F39C070027C9EC /* UISwitch.swift in Sources */,
+				A8D3C34019F39C000027C9EC /* UISlider.swift in Sources */,
 				A8AF821019ED78E30034DA60 /* ScreamTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8CA3A7019ED8C1500B69EFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8B36D9B19EFED8500673B54 /* UIButton.swift in Sources */,
-				A8B36D9C19EFED8500673B54 /* UITextField.swift in Sources */,
-				A8B36D9D19EFED8500673B54 /* UIBarButtonItem.swift in Sources */,
-				A8B36D9E19EFED8500673B54 /* UIDatePicker.swift in Sources */,
-				A8B36D9F19EFED8500673B54 /* UISegmentedControl.swift in Sources */,
-				A8B36DA019EFED8500673B54 /* UISlider.swift in Sources */,
-				A8B36DA119EFED8500673B54 /* UIStepper.swift in Sources */,
-				A8B36DA219EFED8500673B54 /* UISwitch.swift in Sources */,
-				A8CA3A9C19ED92C700B69EFA /* UIControl.swift in Sources */,
-				A8CA3AA019EE386D00B69EFA /* UIGestureRecognizer.swift in Sources */,
-				A8CA3A7B19ED8C1500B69EFA /* ViewController.swift in Sources */,
-				A8CA3A7919ED8C1500B69EFA /* AppDelegate.swift in Sources */,
+				A8D3C34119F39C030027C9EC /* UIStepper.swift in Sources */,
+				A8D3C33C19F39BF20027C9EC /* UITextField.swift in Sources */,
+				A8D3C33E19F39BF80027C9EC /* UIDatePicker.swift in Sources */,
+				A8D3C34319F39C0A0027C9EC /* UIRefreshControl.swift in Sources */,
+				A8D3C33919F39BE70027C9EC /* UIControl.swift in Sources */,
+				A8D3C33B19F39BEF0027C9EC /* UIGestureRecognizer.swift in Sources */,
+				A8D3C33719F39BE30027C9EC /* UIActionSheet.swift in Sources */,
+				A8D3C33D19F39BF50027C9EC /* UIBarButtonItem.swift in Sources */,
+				A8D3C33F19F39BFD0027C9EC /* UISegmentedControl.swift in Sources */,
+				A8D3C33619F39BDF0027C9EC /* UIAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,25 +308,6 @@
 			targetProxy = A8AF820A19ED78E30034DA60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A8CA3A7C19ED8C1500B69EFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8CA3A7D19ED8C1500B69EFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8CA3A8119ED8C1500B69EFA /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8CA3A8219ED8C1500B69EFA /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A8AF821119ED78E30034DA60 /* Debug */ = {
@@ -454,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -567,30 +458,6 @@
 			};
 			name = Release;
 		};
-		A8CA3A9119ED8C1500B69EFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A8CA3A9219ED8C1500B69EFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,15 +484,6 @@
 			buildConfigurations = (
 				A8AF821719ED78E30034DA60 /* Debug */,
 				A8AF821819ED78E30034DA60 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A8CA3A9019ED8C1500B69EFA /* Build configuration list for PBXNativeTarget "Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A8CA3A9119ED8C1500B69EFA /* Debug */,
-				A8CA3A9219ED8C1500B69EFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

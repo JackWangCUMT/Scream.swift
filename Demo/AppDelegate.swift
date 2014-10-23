@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Example
+//  Demo
 //
-//  Created by Pinglin Tang on 14-10-15.
-//  Copyright (c) 2014 Pinglin Tang. All rights reserved.
+//  Created by Pinglin Tang on 14/10/23.
+//  Copyright (c) 2014年 Pinglin Tang. All rights reserved.
 //
 
 import UIKit
