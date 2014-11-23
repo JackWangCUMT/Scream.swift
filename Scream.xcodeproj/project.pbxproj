@@ -17,6 +17,7 @@
 		A85D935819EEA14D00E927AE /* UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935719EEA14D00E927AE /* UISlider.swift */; };
 		A85D935A19EEA24A00E927AE /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935919EEA24A00E927AE /* UIStepper.swift */; };
 		A85D935D19EEA2D300E927AE /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935C19EEA2D300E927AE /* UISwitch.swift */; };
+		A88215351A2221C80075EC34 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88215341A2221C80075EC34 /* UIViewController.swift */; };
 		A8AF820319ED78E30034DA60 /* Scream.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AF820219ED78E30034DA60 /* Scream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8AF820919ED78E30034DA60 /* Scream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AF81FD19ED78E30034DA60 /* Scream.framework */; };
 		A8AF821019ED78E30034DA60 /* ScreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF820F19ED78E30034DA60 /* ScreamTests.swift */; };
@@ -36,6 +37,7 @@
 		A8D3C34219F39C070027C9EC /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D935C19EEA2D300E927AE /* UISwitch.swift */; };
 		A8D3C34319F39C0A0027C9EC /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */; };
 		A8E61C6719F28284004C5C73 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */; };
+		A8EA1E2019FE401A004684EC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EA1E1F19FE401A004684EC /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		A85D935719EEA14D00E927AE /* UISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISlider.swift; sourceTree = "<group>"; };
 		A85D935919EEA24A00E927AE /* UIStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		A85D935C19EEA2D300E927AE /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
+		A88215341A2221C80075EC34 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = SOURCE_ROOT; };
 		A8AF81FD19ED78E30034DA60 /* Scream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AF820119ED78E30034DA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AF820219ED78E30034DA60 /* Scream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scream.h; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		A8CA3A6C19ED880100B69EFA /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A8CA3A9D19EE2D5A00B69EFA /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
 		A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
+		A8EA1E1F19FE401A004684EC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				A85D935919EEA24A00E927AE /* UIStepper.swift */,
 				A85D935C19EEA2D300E927AE /* UISwitch.swift */,
 				A8E61C6619F28284004C5C73 /* UIRefreshControl.swift */,
+				A88215341A2221C80075EC34 /* UIViewController.swift */,
+				A8EA1E1F19FE401A004684EC /* UIAlertController.swift */,
 				A8AF820019ED78E30034DA60 /* Supporting Files */,
 			);
 			path = Scream;
@@ -272,9 +278,11 @@
 				A80383AA19F106E2008ECCE3 /* UIActionSheet.swift in Sources */,
 				A85D934C19EE939900E927AE /* UIButton.swift in Sources */,
 				A80383A819F0F8F8008ECCE3 /* UIAlertView.swift in Sources */,
+				A8EA1E2019FE401A004684EC /* UIAlertController.swift in Sources */,
 				A85D935019EE94D300E927AE /* UITextField.swift in Sources */,
 				A8E61C6719F28284004C5C73 /* UIRefreshControl.swift in Sources */,
 				A85D935619EEA07800E927AE /* UISegmentedControl.swift in Sources */,
+				A88215351A2221C80075EC34 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
