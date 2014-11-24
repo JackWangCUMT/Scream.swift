@@ -107,6 +107,24 @@ class ViewController: UIViewController {
         self.view.addSubview(switch_)
         Y += switch_.frame.height.native
         
+        //UIAlertView
+        Y += 20
+        var alertButton_ = UIButton(frame:CGRect(x: 20, y: Y, width: W - 40, height: 30)).now {[weak self] button in
+            if self == nil { return }
+            var strongSelf = self!
+            button.backgroundColor = randomColor()
+
+            button.setTitle("Alert!", forState: UIControlState.Normal)
+            strongSelf.view.addSubview(button)
+        }.when(UIControlEvents.TouchUpInside) {
+            $0.backgroundColor = randomColor(avoid:$0.backgroundColor)
+            UIAlertView(title: "I'm title", message: "I'm message", cancelButtonTitle: "Cancel", otherButtonTitles: "OK?")
+                .clicked { buttonAtIndex in
+                    UIAlertView(title: "Clicked", message: buttonAtIndex == 0 ? "Cancel" : "OK", cancelButtonTitle: "Cacncel").show()
+                }.show()
+        }
+        Y += 30
+        
         //UIDatePickerLabel
         Y += 20
         var datePickerLabel_ = UILabel(frame: CGRect(x: 20, y: Y , width: W, height: 20.0))
